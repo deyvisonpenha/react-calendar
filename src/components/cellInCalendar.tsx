@@ -1,8 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react'
 import moment from 'moment';
-import { Table, Icon, Header, Modal, Button, Divider, Radio, Form} from 'semantic-ui-react';
+import { Table, Icon, Header, Modal, Button, Form} from 'semantic-ui-react';
 import { v4 as uuidv4 } from 'uuid';
-//import { SketchPicker } from 'react-color';
 
 import {Cell, Today, HeaderDay, ColorList} from '../Styles/Global';
 import Event from './event';

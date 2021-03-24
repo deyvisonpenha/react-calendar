@@ -2,7 +2,7 @@ import React from 'react'
 import reactCSS from 'reactcss'
 import { SketchPicker } from 'react-color'
 
-class SketchExample extends React.Component {
+class ColorSelect extends React.Component {
   state = {
     displayColorPicker: false,
     color: "#750a0a",
@@ -68,4 +68,4 @@ class SketchExample extends React.Component {
   }
 }
 
-export default SketchExample
+export default ColorSelect

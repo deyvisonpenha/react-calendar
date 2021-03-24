@@ -8,12 +8,7 @@ import {Container} from './Styles/Global'
 
 const App: React.FC = ()=>{
   return (
-    <>
-      <Container>
-        <Header />
-        <Calendar />
-      </Container>
-    </>
+     <Calendar />
   );
 }
 

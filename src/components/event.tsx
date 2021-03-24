@@ -37,6 +37,15 @@ const EventComponent: React.FC<IProps> = ({dayInCalendar, scheduleEvents}) => {
       setWeather(json.weather[0].main)
     })    
   }
+  const handleDeletOne = (scheduleEvent: IscheduleEvent) => {
+    const updatedScheduleEvent = scheduleEvents.filter(event => event !== scheduleEvent)
+    localStorage.setItem('scheduleEvents', JSON.stringify(updatedScheduleEvent));
+    window.location.reload();
+  }
+
+  const handleUpdateOne = (scheduleEvent: IscheduleEvent) => {
+    
+  }
 
   return(
     <Event>
@@ -50,6 +59,11 @@ const EventComponent: React.FC<IProps> = ({dayInCalendar, scheduleEvents}) => {
               <h4>At {new Date(event.day).getHours()}H</h4>
               
               <h4> Wheter in {event.schedule.city} is {weather} </h4>
+
+              <div style={{display: "flex", justifyContent: "space-around"}}>
+                <Button icon={"erase"} label="Edit" onClick={() => handleUpdateOne(event) }/>
+                <Button icon={"trash"} onClick={() => handleDeletOne(event) }/>
+              </div>
             </>
           }
           on='click'
@@ -57,7 +71,7 @@ const EventComponent: React.FC<IProps> = ({dayInCalendar, scheduleEvents}) => {
           trigger={
             <Button 
               size={"mini"} 
-              style={{background: event.schedule.color }} 
+              style={{background: event.schedule.color, color: "#fff" }} 
             >
               {event.schedule.reminder}
             </Button>}

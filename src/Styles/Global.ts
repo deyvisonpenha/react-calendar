@@ -11,17 +11,17 @@ export const Container = styles.div`
 export const Cell = styles.div`
   display: flex;
   flex-direction: column;
-  height: 100px;
+  height: 100%;
   align-content: space-between;
   max-height: 190px
 `;
 
 export const Event = styles.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-aling: center;
   overflow: auto;
-  max-height: 100px
+  max-height: 190px
 `;
 
 export const Today = styles.div`
@@ -51,36 +51,16 @@ export const ColorList = styles.div`
   label{
     margin-right: 10px;
   }
-
-
 `
 
-export const Modal = styles.div`
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-  }
+export const HeaderStyle = styles.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-  .modal-main {
-    position:fixed;
-    background: white;
-    width: 80%;
-    height: auto;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-  }
-  
-  .display-block {
-    background: rgba(0, 0, 0, 0.6);
-    display: block;
-  }
-  
-  .display-none {
-    display: none;
+  .select-month{
+    strong{
+      margin: 0 10px;
+    }
   }
 `;
