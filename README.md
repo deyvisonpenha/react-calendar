@@ -1,6 +1,8 @@
 # Front-end Javascript Challenge
 This project was developed in React and create a demo calendar application. For that I used only React Hooks and some UI frameworks as Styled-Components and Material-ui. For work with time I used Moment.js
 
+![name-of-you-image](https://github.com/deyvisonpenha/react-calendar/blob/main/public/dashboard-calendar.png?raw=true)
+
 ## Structure of Project
 App.js have only one component named Calendar that have all other components necessary to layout. I have create two elements as Input and a Color-Selector, these elements can be customized in the future.
 
